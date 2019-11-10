@@ -1,0 +1,111 @@
+.trending {
+  &-text {
+    font-weight: 700;
+    font-size: 16px;
+    & + a {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .row {
+    scroll-snap-type: x mandatory;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(300px);
+  }
+  &-cards {
+    &:last-child {
+      &:after {
+        height: 100%;
+        width: 100%;
+        padding: 0.1rem;
+        content: "";
+        display: block;
+      }
+    }
+    overflow-y: scroll;
+    @include no-scroll-bar;
+    .col {
+      scroll-snap-align: center;
+      max-width: 37vw;
+      min-width: 37vw;
+    }
+    .card {
+      &-title {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      &-text {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.trending-overlay {
+  .trending-cards {
+    .col {
+      max-width: 35vw;
+      min-width: 35vw;
+    }
+    .card {
+      border: 0px;
+      border-radius: 10px;
+      height: 200px;
+      &-img-top {
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      &-body {
+        border-radius: 10px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: $white;
+        background: rgba(#000, 0.3);
+      }
+      &-text {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.trending.singular-card {
+  .col {
+    max-width: 75vw;
+    min-width: 75vw;
+  }
+  .card {
+    &-img-top {
+      min-height: 178px;
+      max-height: 178px;
+    }
+    .card-title--with-review {
+      .text {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .rating {
+        font-size: 12px;
+        padding: 5px;
+        background-color: $brand-color-green;
+        color: $white;
+        display: flex;
+        align-items: center;
+        i {
+          margin-top: -2px;
+          vertical-align: top;
+          font-size: 10px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
