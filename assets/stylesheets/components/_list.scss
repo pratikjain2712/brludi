@@ -1,0 +1,99 @@
+.dish {
+  // border: 0px;
+  padding: 5px !important;
+  &-img {
+    max-width: 100px !important;
+    height: 80px;
+    img {
+      height: 100%;
+      width: 70px;
+      border-radius: 5px;
+    }
+  }
+  &-details {
+    padding-left: 0;
+    max-width: calc(100% - 100px);
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  &-type {
+    &.veg {
+      border-color: $brand-color-green;
+      .dish-type-indicator {
+        background-color: $brand-color-green;
+      }
+    }
+    &.non-veg {
+      border-color: $brand-color-orange;
+      .dish-type-indicator {
+        background-color: $brand-color-orange;
+      }
+    }
+    border-style: solid;
+    border-width: 1px;
+    height: 18px;
+    width: 20px;
+    padding: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &-indicator {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      background-color: black;
+      border-radius: 50%;
+    }
+  }
+  &-name {
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    max-width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &-description {
+    font-size: 12px;
+    margin-bottom: 0;
+    overflow: hidden;
+    max-width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &-footer {
+    margin-top: 15px;
+    font-size: 12px;
+    align-items: center;
+  }
+  &-credits {
+    font-size: 14px;
+  }
+  &-author {
+    font-size: 14px;
+    font-weight: 400;
+    color: $brand-color-orange;
+  }
+  &-price {
+    margin-left: auto;
+    display: inline-block;
+    background-color: $brand-color-orange;
+    margin: 0;
+    padding: 5px;
+    color: $white;
+    font-size: 12px;
+  }
+  &-currency {
+    &-type {
+      margin-right: 5px;
+    }
+    &-value {
+    }
+  }
+}
