@@ -77,37 +77,48 @@
         </li>
       </ul>
     </section>
-    <nav class="navbar fixed-bottom navbar-light bg-light">
+    <nav class="navbar filter-bar fixed-bottom navbar-light bg-light">
       <ul class="navbar-nav flex-row justify-content-around w-100">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">veg only</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">sort</a>
         </li>
         <li class="nav-item">
-          <button class="nav-link" data-toggle="offcanvas">some link</button>
+          <button class="nav-link" data-toggle="offcanvas">filter</button>
         </li>
       </ul>
     </nav>
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-      <span class="navbar-text" data-toggle="offcanvas">
-        <i class="fas fa-arrow-left" aria-hidden="true"></i>
-        
-      </span>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Notifications</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Switch account</a>
-        </li>
+      <div class="d-flex py-3 filter-header justify-content-between">
+        <h3 class="filter-header-title mb-0">Filters</h3>
+        <span class="navbar-text" data-toggle="offcanvas">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="container-fluild filter-container">
+        <div class="row">
+          <div class="col-4">
+            <div class="navbar-nav bg-white box-shadow">
+              <nav class="nav nav-underline">
+                <a class="nav-link" href="#">
+                  Friends
+                  <span class="badge badge-pill bg-light align-text-bottom">27</span>
+                </a>
+                <a class="nav-link" href="#">Explore</a>
+                <a class="nav-link" href="#">Suggestions</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+              </nav>
+            </div>
+          </div>
+          <div class="col-8"></div>
+        </div>
+      </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

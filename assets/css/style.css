@@ -5852,6 +5852,11 @@ body {
   position: absolute;
   width: 1px; }
 
+.filter-bar {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2); }
+  .filter-bar .nav-link {
+    text-transform: capitalize; }
+
 html,
 body {
   overflow-x: hidden;
@@ -5859,13 +5864,12 @@ body {
 
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
+    z-index: 9999;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 100%;
     width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
     overflow-y: auto;
     visibility: hidden;
     background-color: #fff;
@@ -5880,21 +5884,21 @@ body {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      height: 25px;
-      width: 25px;
+      height: 20px;
+      width: 20px;
       padding: 5px;
       border-radius: 50%;
-      background-color: #f3761e;
-      margin: 15px 0px; }
+      background-color: #fff; }
       .offcanvas-collapse .navbar-text i {
-        color: #fff;
-        font-size: 16px; } }
+        color: #f3761e;
+        font-size: 20px; } }
 
 .nav-scroller {
   position: relative;
   z-index: 2;
   height: 2.75rem;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); }
   .nav-scroller .nav {
     display: -ms-flexbox;
     display: flex;
@@ -5909,8 +5913,8 @@ body {
     -webkit-overflow-scrolling: touch; }
 
 .navbar-nav .nav-link {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding: 0.75rem;
+  padding-right: 0;
   font-size: 16px;
   color: #373737 !important; }
   .navbar-nav .nav-link:hover {
@@ -5934,6 +5938,22 @@ body {
 
 .lh-150 {
   line-height: 1.5; }
+
+.filter-header {
+  align-items: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1; }
+  .filter-header-title {
+    font-size: 20px;
+    color: #373737; }
+
+.filter-container {
+  height: calc(100% - 56px); }
+  .filter-container .row {
+    height: 100%; }
 
 .trending-text {
   font-weight: 700;
