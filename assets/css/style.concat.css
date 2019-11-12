@@ -6032,3 +6032,80 @@ body {
       font-size: 20px; }
     .howItWorks .carousel-item .card-text {
       font-size: 16px; }
+
+.dish {
+  padding: 5px !important; }
+  .dish-img {
+    max-width: 100px !important;
+    height: 80px; }
+    .dish-img img {
+      height: 100%;
+      width: 70px;
+      border-radius: 5px; }
+  .dish-details {
+    padding-left: 0;
+    max-width: calc(100% - 100px); }
+  .dish-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; }
+  .dish-type {
+    border-style: solid;
+    border-width: 1px;
+    height: 18px;
+    width: 20px;
+    padding: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+    .dish-type.veg {
+      border-color: #89c13e; }
+      .dish-type.veg .dish-type-indicator {
+        background-color: #89c13e; }
+    .dish-type.non-veg {
+      border-color: #f3761e; }
+      .dish-type.non-veg .dish-type-indicator {
+        background-color: #f3761e; }
+    .dish-type-indicator {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      background-color: black;
+      border-radius: 50%; }
+  .dish-name {
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    max-width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .dish-description {
+    font-size: 12px;
+    margin-bottom: 0;
+    overflow: hidden;
+    max-width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .dish-footer {
+    margin-top: 15px;
+    font-size: 12px;
+    align-items: center; }
+  .dish-credits {
+    font-size: 14px; }
+  .dish-author {
+    font-size: 14px;
+    font-weight: 400;
+    color: #f3761e; }
+  .dish-price {
+    margin-left: auto;
+    display: inline-block;
+    background-color: #f3761e;
+    margin: 0;
+    padding: 5px;
+    color: #fff;
+    font-size: 12px; }
+  .dish-currency-type {
+    margin-right: 5px; }
