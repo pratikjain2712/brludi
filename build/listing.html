@@ -10,14 +10,15 @@
 
     <!-- Custom css -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/vendors/fontawesome5/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/vendors/fontawesome5/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/vendors/bootstrap-slider.css" type="text/css" />
     <title>Brludi | Listing Page</title>
   </head>
 
   <body>
     <header class="container">
       <nav class="navbar navbar-expand-sm navbar-light px-0">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="assets/images/brludiLogo.png" alt="Brludi Logo" width="120" />
         </a>
         <a class="btn btn-outline-dark" role="button" href="login.html" type="button"><i class="fa fa-user"></i></a>
@@ -77,13 +78,249 @@
         </li>
       </ul>
     </section>
+    <nav class="navbar filter-bar fixed-bottom navbar-light bg-light">
+      <ul class="navbar-nav flex-row justify-content-around w-100">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">veg only</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">sort</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-toggle="offcanvas">filter</button>
+        </li>
+      </ul>
+    </nav>
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+      <div class="d-flex py-3 filter-header justify-content-between">
+        <h3 class="filter-header-title mb-0">Filters</h3>
+        <span class="navbar-text" data-toggle="offcanvas">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="container filter-container">
+        <div class="row">
+          <div class="col-4 filter-type">
+            <div class="navbar-nav ">
+              <nav class="nav" role="tablist" aria-orientation="vertical" id="filter-pill-tab">
+                <a class="nav-link active" id="price-filter-tab" href="#price-filter" data-toggle="tab" role="tab" aria-controls="price-filter-tab" aria-selected="true">
+                  price
+                </a>
+                <a class="nav-link" id="cuisine-filter-tab" href="#cuisine-filter" data-toggle="tab" role="tab" aria-controls="cuisine-filter-tab" aria-selected="false">
+                  cuisine
+                </a>
+                <a class="nav-link" id="food-type-filter-tab" href="#food-type-filter" data-toggle="tab" role="tab" aria-controls="food-type-filter-tab" aria-selected="false">
+                  food type
+                </a>
+                <a class="nav-link" id="meal-type-filter-tab" href="#meal-type-filter" data-toggle="tab" role="tab" aria-controls="meal-type-filter-tab" aria-selected="false">
+                  meal type
+                </a>
+                <a class="nav-link" id="delivery-typefilter-tab" href="#delivery-type-filter" data-toggle="tab" role="tab" aria-controls="delivery-type-filter-tab" aria-selected="false">
+                  delivery type
+                </a>
+                <a class="nav-link" id="more-filter-tab" href="#more-filter" data-toggle="tab" role="tab" aria-controls="more-filters-tab" aria-selected="false">
+                  more filters
+                </a>
+              </nav>
+            </div>
+          </div>
+          <div class="col-8 filter-area tab-content" id="filter-pill-content">
+            <div class="tab-pane fade show active" id="price-filter" role="tabpanel" aria-labelledby="price-filter-tab">
+              <p class="filter-area-header">Select the cost range</p>
+              <div class="priceFilter">
+                <span class="maxPrice"> 1000</span>
+                <input id="priceSlider" type="text" />
+                <span class="minPrice"> 0</span>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="cuisine-filter" role="tabpanel" aria-labelledby="cuisine-filter-tab">
+              <div class="accordion" id="cuisine-accordian">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="d-flex justify-content-between align-items-center">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#cuisine_1" aria-expanded="true" aria-controls="cuisine_1">
+                        North Indian
+                      </button>
+                      <i class="fas dropdown_icon"></i>
+                    </h5>
+                  </div>
+
+                  <div id="cuisine_1" class="collapse show" aria-labelledby="headingOne" data-parent="#cuisine-accordion">
+                    <div class="card-body">
+                      <ul class="checkbox-list-container">
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="afghani" id="afghani" />
+                          <label for="afghani"> <i class="far"></i> afghani</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="awadhi" id="awadhi" />
+                          <label for="awadhi"> <i class="far"></i> awadhi</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="punjabi" id="punjabi" />
+                          <label for="punjabi"> <i class="far"></i> punjabi</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="uttarpradesh" id="uttarpradesh" />
+                          <label for="uttarpradesh"> <i class="far"></i> uttar pradesh</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="d-flex justify-content-between align-items-center">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#cuisine_2" aria-expanded="false" aria-controls="cuisine_2">
+                        South Indian
+                      </button>
+                      <i class="fas dropdown_icon"></i>
+                    </h5>
+                  </div>
+
+                  <div id="cuisine_2" class="collapse" aria-labelledby="headingOne" data-parent="#cuisine-accordion">
+                    <div class="card-body">
+                      <ul class="checkbox-list-container">
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="afghani" id="afghani" />
+                          <label for="afghani"> <i class="far"></i> afghani</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="awadhi" id="awadhi" />
+                          <label for="awadhi"> <i class="far"></i> awadhi</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="punjabi" id="punjabi" />
+                          <label for="punjabi"> <i class="far"></i> punjabi</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="uttarpradesh" id="uttarpradesh" />
+                          <label for="uttarpradesh"> <i class="far"></i> uttar pradesh</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="d-flex justify-content-between align-items-center">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#cuisine_3" aria-expanded="false" aria-controls="cuisine_3">
+                        East Indian
+                      </button>
+                      <i class="fas dropdown_icon"></i>
+                    </h5>
+                  </div>
+
+                  <div id="cuisine_3" class="collapse" aria-labelledby="headingOne" data-parent="#cuisine-accordion">
+                    <div class="card-body">
+                      <ul class="checkbox-list-container">
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="afghani" id="afghani" />
+                          <label for="afghani"> <i class="far"></i> afghani</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="awadhi" id="awadhi" />
+                          <label for="awadhi"> <i class="far"></i> awadhi</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="punjabi" id="punjabi" />
+                          <label for="punjabi"> <i class="far"></i> punjabi</label>
+                        </li>
+                        <li class="checkbox-item">
+                          <input type="checkbox" name="uttarpradesh" id="uttarpradesh" />
+                          <label for="uttarpradesh"> <i class="far"></i> uttar pradesh</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="food-type-filter" role="tabpanel" aria-labelledby="food-type-filter-tab">
+              <ul class="d-flex flex-wrap toggle-token-container">
+                <li class="toggle-token">
+                  <input type="checkbox" name="veg" id="veg-type" />
+                  <label for="veg-type">veg</label>
+                </li>
+                <li class="toggle-token">
+                  <input type="checkbox" name="nonveg" id="nonveg-type" />
+                  <label for="nonveg-type">non veg</label>
+                </li>
+                <li class="toggle-token">
+                  <input type="checkbox" name="vegan" id="vegan-type" />
+                  <label for="vegan-type">vegan</label>
+                </li>
+                <li class="toggle-token">
+                  <input type="checkbox" name="jain" id="jain-type" />
+                  <label for="jain-type">jain</label>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="meal-type-filter" role="tabpanel" aria-labelledby="meal-type-filter-tab">
+              <ul class="checkbox-list-container">
+                <li class="checkbox-item">
+                  <input type="checkbox" name="breakfast" id="breakfast-type" />
+                  <label for="breakfast-type"> <i class="far"></i> breakfast</label>
+                </li>
+                <li class="checkbox-item">
+                  <input type="checkbox" name="lunch" id="lunch-type" />
+                  <label for="lunch-type"> <i class="far"></i> lunch</label>
+                </li>
+                <li class="checkbox-item">
+                  <input type="checkbox" name="dinner" id="dinner-type" />
+                  <label for="dinner-type"> <i class="far"></i> dinner</label>
+                </li>
+                <li class="checkbox-item">
+                  <input type="checkbox" name="snacks" id="snacks-type" />
+                  <label for="snacks-type"> <i class="far"></i> snacks</label>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="delivery-type-filter" role="tabpanel" aria-labelledby="delivery-type-filter-tab">
+              <ul class="checkbox-list-container">
+                <li class="checkbox-item">
+                  <input type="checkbox" name="home-delivery" id="home-delivery" />
+                  <label for="home-delivery"> <i class="far"></i> home delivery</label>
+                </li>
+                <li class="checkbox-item">
+                  <input type="checkbox" name="inhouse" id="inhouse-type" />
+                  <label for="inhouse-type"> <i class="far"></i> inhouse</label>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="more-filter" role="tabpanel" aria-labelledby="more-filter-tab">
+              more filters
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <nav class="navbar filter-footer navbar-light bg-light">
+          <a class="nav-item filter-footer-apply" href="#">Apply Filters</a>
+          <a class="nav-item filter-footer-close" data-toggle="offcanvas" href="#">Close</a>
+        </nav>
+      </footer>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
+    <script src="assets/js/offCanvas.js"></script>
+    <script src="assets/js/bootstrap-slider.js"></script>
     <script>
+      var slider = new Slider("#priceSlider", {
+        reversed: true,
+        min: 0,
+        max: 1000,
+        value: 300,
+        tooltip: "always",
+        orientation: "vertical",
+        tooltip_position: "left",
+        step: 50
+      });
       const init = function() {
         cssScrollSnapPolyfill();
       };
