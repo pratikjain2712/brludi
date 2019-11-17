@@ -17,6 +17,11 @@
     &:not(:last-child) {
       margin-right: auto;
     }
+    img {
+      width: 100%;
+      height: 150%;
+      object-fit: cover;
+    }
   }
 }
 
