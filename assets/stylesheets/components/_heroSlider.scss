@@ -11,12 +11,12 @@
   }
 }
 .addBoxes {
-  padding: 0px 35px;
-  .col {
-    display: flex;
-    justify-content: center;
-    max-width: 47%;
+  .col-6 {
+    max-width: 48%;
     overflow: hidden;
+    &:not(:last-child) {
+      margin-right: auto;
+    }
   }
 }
 

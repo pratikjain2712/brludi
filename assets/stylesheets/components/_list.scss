@@ -1,5 +1,14 @@
+.listings {
+  ul {
+    margin-bottom: 0;
+    max-height: calc(100vh - 170px);
+    overflow-y: scroll;
+  }
+}
+
 .dish {
   // border: 0px;
+  margin-bottom: 15px;
   padding: 5px !important;
   &-img {
     max-width: 100px !important;

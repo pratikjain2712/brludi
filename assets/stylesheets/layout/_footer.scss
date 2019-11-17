@@ -6,12 +6,28 @@
   .nav-link {
     text-transform: capitalize;
     width: 100%;
-      background: transparent;
-      border: 0px;
-      outline: none;
-      text-align: center;
-    }
-  .nav-item{
+    background: transparent;
+    border: 0px;
+    outline: none;
+    text-align: center;
+  }
+  .nav-item {
     width: 100%;
+  }
+}
+
+.footer {
+  background-color: $text-color;
+  margin: 0px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: $white;
   }
 }

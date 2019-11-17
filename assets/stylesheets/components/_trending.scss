@@ -13,23 +13,37 @@
     scroll-snap-points-x: repeat(300px);
   }
   &-cards {
-    &:last-child {
-      &:after {
-        height: 100%;
-        width: 100%;
-        padding: 0.1rem;
-        content: "";
-        display: block;
+    //   &:last-child {
+    //     &:after {
+    //       height: 100%;
+    //       width: 100%;
+    //       padding: 0.1rem;
+    //       content: "";
+    //       display: block;
+    //     }
+    //   }
+    //   overflow-y: scroll;
+    //   @include no-scroll-bar;
+    .col-6 {
+      max-width: 48%;
+      &:not(:last-child) {
+        margin-right: auto;
       }
-    }
-    overflow-y: scroll;
-    @include no-scroll-bar;
-    .col {
-      scroll-snap-align: center;
-      max-width: 37vw;
-      min-width: 37vw;
+      .col {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+      // min-width: 37vw;
     }
     .card {
+      height: 100%;
+      &-img-top {
+        flex: auto;
+      }
+      &-body {
+        flex: none;
+      }
       &-title {
         font-size: 14px;
         margin-bottom: 5px;
@@ -43,11 +57,17 @@
 
 .trending-overlay {
   .trending-cards {
-    .col {
-      max-width: 35vw;
-      min-width: 35vw;
+    .col-6 {
+      margin: 0;
+      max-width: 48%;
+      margin-bottom: 10px;
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
     }
+
     .card {
+      cursor: pointer;
       border: 0px;
       border-radius: 10px;
       height: 200px;
@@ -61,6 +81,7 @@
         object-position: center;
       }
       &-body {
+        height: 100%;
         border-radius: 10px;
         z-index: 1;
         display: flex;
