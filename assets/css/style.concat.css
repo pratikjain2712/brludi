@@ -6171,11 +6171,14 @@ body {
   .trending-cards .col-6 .col:not(:last-child) {
     margin-bottom: 10px; }
 
+.trending-cards .vertical-col .card-img-top {
+  min-height: 315px; }
+
+.trending-cards .horizontal-col .card-img-top {
+  min-height: 125px; }
+
 .trending-cards .card {
   height: 100%; }
-  .trending-cards .card-img-top {
-    flex: auto;
-    height: calc(100% - 53px); }
   .trending-cards .card-body {
     flex: none; }
   .trending-cards .card-title {
@@ -6336,9 +6339,7 @@ body {
       font-size: 16px; }
 
 .listings ul {
-  margin-bottom: 0;
-  max-height: calc(100vh - 170px);
-  overflow-y: scroll; }
+  margin-bottom: 0; }
 
 .dish {
   margin-bottom: 15px;

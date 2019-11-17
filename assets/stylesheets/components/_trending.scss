@@ -36,12 +36,20 @@
       }
       // min-width: 37vw;
     }
+
+    .vertical-col {
+      .card-img-top {
+        min-height: 315px;
+      }
+    }
+    .horizontal-col {
+      .card-img-top {
+        min-height: 125px;
+      }
+    }
     .card {
       height: 100%;
-      &-img-top {
-        flex: auto;
-        height: calc(100% - 53px);
-      }
+
       &-body {
         flex: none;
       }
