@@ -1,0 +1,40 @@
+.news-letter {
+  background-color: #eaeaec;
+  p {
+    padding: 40px 0px 0px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: $text-color;
+  }
+  .input-holder {
+    padding: 15px 0px 40px;
+    input {
+      font-size: 16px;
+      padding: 10px 5px;
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+      &::placeholder {
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+    .btn {
+      height: 100%;
+      padding: 10px 20px;
+      border-radius: 0px;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 16px;
+      color: $white;
+      background-color: $brand-color-orange;
+      &:hover,
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
