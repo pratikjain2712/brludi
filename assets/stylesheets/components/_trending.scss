@@ -43,6 +43,10 @@
       }
     }
     .horizontal-col {
+      .row {
+        flex-direction: column;
+        height: 100%;
+      }
       .card-img-top {
         min-height: 125px;
       }

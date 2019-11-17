@@ -6174,6 +6174,10 @@ body {
 .trending-cards .vertical-col .card-img-top {
   min-height: 315px; }
 
+.trending-cards .horizontal-col .row {
+  flex-direction: column;
+  height: 100%; }
+
 .trending-cards .horizontal-col .card-img-top {
   min-height: 125px; }
 
