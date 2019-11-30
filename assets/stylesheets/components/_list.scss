@@ -8,11 +8,11 @@
 
 .dish {
   border: 0px;
-  margin-bottom: 20px;
-  padding: 5px !important;    
+  margin-bottom: 15px;
   padding: 10px !important;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
   border-radius: 0px !important;
+  cursor: pointer;
   &-img {
     max-width: 100px !important;
     height: 80px;
@@ -62,7 +62,7 @@
     }
   }
   &-name {
-    order:-1;
+    order: -1;
     margin-right: 5px;
     display: inline-block;
     font-size: 16px;
@@ -102,6 +102,17 @@
     padding: 5px;
     color: $white;
     font-size: 12px;
+    font-weight: 500;
+    &.only-outline {
+      background-color: $white;
+      color: $brand-color-orange;
+      border: 1px solid #dfdfdf;
+      &:hover {
+        background-color: $brand-color-orange;
+        color: $white;
+        border: 1px solid $brand-color-orange;
+      }
+    }
   }
   &-currency {
     &-type {

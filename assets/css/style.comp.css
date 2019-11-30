@@ -5784,9 +5784,17 @@ a {
 .container {
   padding: 0px 15px !important; }
 
+.section-heading {
+  margin: 0px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 400px;
+  color: #f3761e;
+  text-transform: capitalize; }
+
 body {
   position: relative;
-  padding-bottom: 60px; }
+  padding-bottom: 50px; }
 
 @font-face {
   font-family: "BerlinSansFB-Reg";
@@ -6060,6 +6068,7 @@ body {
   .filter-footer li {
     flex: 1;
     list-style-type: none;
+    cursor: pointer;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -6166,11 +6175,9 @@ body {
   padding: 0;
   margin: 0;
   max-width: 48%;
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
   .trending-cards .col-6:nth-child(odd) {
     margin-right: auto; }
-  .trending-cards .col-6:nth-child(n + 3) {
-    margin-bottom: 0px; }
 
 .trending-cards .card {
   height: 100%; }
@@ -6336,11 +6343,11 @@ body {
 
 .dish {
   border: 0px;
-  margin-bottom: 20px;
-  padding: 5px !important;
+  margin-bottom: 15px;
   padding: 10px !important;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-  border-radius: 0px !important; }
+  border-radius: 0px !important;
+  cursor: pointer; }
   .dish-img {
     max-width: 100px !important;
     height: 80px; }
@@ -6414,7 +6421,16 @@ body {
     margin: 0;
     padding: 5px;
     color: #fff;
-    font-size: 12px; }
+    font-size: 12px;
+    font-weight: 500; }
+    .dish-price.only-outline {
+      background-color: #fff;
+      color: #f3761e;
+      border: 1px solid #dfdfdf; }
+      .dish-price.only-outline:hover {
+        background-color: #f3761e;
+        color: #fff;
+        border: 1px solid #f3761e; }
   .dish-currency-type {
     margin-right: 5px; }
 
@@ -6450,3 +6466,111 @@ body {
       .news-letter .input-holder .btn:hover, .news-letter .input-holder .btn:focus {
         outline: none;
         box-shadow: none; }
+
+.detailed-section .detail-header-title {
+  margin-bottom: 5px; }
+  .detailed-section .detail-header-title .dish-title {
+    order: -1;
+    margin-right: 5px;
+    font-size: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    max-width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+.detailed-section .detail-header .dish-subtitle {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 0; }
+
+.detail-description {
+  margin: 15px 0px 0px; }
+  .detail-description-dish--img {
+    height: 230px;
+    margin: 0px; }
+    .detail-description-dish--img img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center; }
+  .detail-description-dish--chef {
+    margin: 15px 0px; }
+    .detail-description-dish--chef-img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%; }
+    .detail-description-dish--chef-name {
+      margin-left: 10px;
+      color: #373737;
+      font-size: 16px; }
+      .detail-description-dish--chef-name span {
+        color: #f3761e; }
+  .detail-description-dish--pricing {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    list-style-type: none; }
+    .detail-description-dish--pricing-item {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .detail-description-dish--pricing-item p {
+        margin-bottom: 5px;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 18px; }
+      .detail-description-dish--pricing-item p.price-type {
+        text-transform: capitalize; }
+  .detail-description-dish--highlights ul {
+    padding-left: 18px; }
+    .detail-description-dish--highlights ul li {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 5px; }
+  .detail-description-dish--foodOptions ul {
+    padding: 0;
+    list-style-type: none; }
+    .detail-description-dish--foodOptions ul li {
+      border: 0px;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 0px !important;
+      cursor: pointer;
+      max-width: 100%; }
+      .detail-description-dish--foodOptions ul li .dish-category {
+        font-weight: 300;
+        font-size: 14px;
+        margin-bottom: 0;
+        text-transform: capitalize; }
+      .detail-description-dish--foodOptions ul li .dish-price {
+        padding: 5px 10px; }
+  .detail-description-dish--foodOptions-wrapper {
+    margin-right: 20px;
+    width: 100%; }
+  .detail-description-dish--foodOptions-item {
+    margin-bottom: 5px; }
+    .detail-description-dish--foodOptions-item .dish-type {
+      float: left;
+      margin-right: 5px; }
+    .detail-description-dish--foodOptions-item--name {
+      font-size: 16px;
+      margin: 0;
+      line-height: 20px; }
+  .detail-description-dish--similarDishes .trending-cards .card {
+    border: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    .detail-description-dish--similarDishes .trending-cards .card-title {
+      margin-bottom: 10px; }
+    .detail-description-dish--similarDishes .trending-cards .card-text {
+      margin-top: 10px; }
+      .detail-description-dish--similarDishes .trending-cards .card-text p {
+        margin-bottom: 0; }
+        .detail-description-dish--similarDishes .trending-cards .card-text p.dish-category {
+          font-size: 14px;
+          font-weight: 300; }
+    .detail-description-dish--similarDishes .trending-cards .card-body .dish-type {
+      float: left;
+      margin-right: 10px; }

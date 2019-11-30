@@ -38,7 +38,17 @@ a {
   padding: 0px 15px !important;
 }
 
+.section-heading {
+  margin: 0px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 400px;
+  color: $brand-color-orange;
+  text-transform: capitalize;
+
+}
+
 body {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
