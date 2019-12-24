@@ -30,7 +30,7 @@
     }
   }
   &-input-fields {
-    &-label{
+    &-label {
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 15px;
@@ -85,6 +85,16 @@
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba($brand-color-orange, 0.25);
+  }
+  &-outline {
+    background-color: $white;
+    color: $brand-color-orange;
+    border: 1px solid #dfdfdf;
+    &:hover {
+      background-color: $brand-color-orange;
+      color: $white;
+      border: 1px solid $brand-color-orange;
+    }
   }
 }
 

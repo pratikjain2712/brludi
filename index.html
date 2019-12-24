@@ -23,7 +23,7 @@
       <a class="navbar-brand" href="#">
         <img data-src="assets/images/brludiLogo.png" class="lazyload" alt="Brludi Logo" width="120" />
       </a>
-      <a class="btn btn-outline-dark" role="button" href="login.html" type="button"><i class="fa fa-user"></i></a>
+      <button data-toggle="offcanvas" class="btn btn-outline-dark" type="button"><i class="fa fa-user"></i></button>
       <!-- <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
@@ -269,6 +269,107 @@
   <footer class="footer container">
     <p>&copy; 2019 Brludi. All rights reserved.</p>
   </footer>
+  <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+    <!-- <div class="container unknown-profile-container">
+      <span class="close-icon" data-toggle="offcanvas">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </span>
+      <div class="unknow-profile">
+        <a class="navbar-brand" href="#">
+          <img data-src="assets/images/brludiLogo.png" class="lazyload" alt="Brludi Logo" width="180" />
+        </a>
+        <h3 class="message">
+          Log in or sign up to Burludi
+        </h3>
+        <div class="row">
+          <div class="col">
+            <button class="button button-orange"  type="button" data-react-toolbox="button">
+              <a href="login.html" class="d-block">Log in</a>
+            </button>
+          </div>
+          <div class="col">
+            <button class="button button-grey" type="button" data-react-toolbox="button">
+              <a href="register.html" class="d-block">Sign up</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="profile-container">
+      <div class="d-flex py-0 filter-header justify-content-start">
+        <span class="navbar-text mr-3" data-toggle="offcanvas">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </span>
+        <h3 class="filter-header-title mb-0">
+          <a class="navbar-brand" href="#">
+            <img data-src="assets/images/brludiLogo.png" class="lazyload" alt="Brludi Logo" width="120" />
+          </a>
+        </h3>
+      </div>
+      <div class="profile">
+        <div class="item-group mt-10 common-feedback">
+          <a href="profile.html">
+            <div class="item">
+              <div class="left mt10 "><img
+                  src="https://b.zmtcdn.com/data/user_profile_pictures/f04/b31fb26df185e58668b1dd34a1b3df04.jpg?fit=around%7C100%3A100&amp;crop=100%3A100%3B%2A%2C%2A"
+                  class="avatar"></div>
+              <div class="left mt10 ml10">
+                <div class="profile-item-name">Pratik Jain</div>
+                <div class="profile-item-city">Mumbai</div>
+              </div>
+            </div>
+            <div class="row m-0 item bordered align-items-center">
+              <div class="col-8 pl-0 mt1 label">View your account</div>
+              <div class="col-4 pr15 icon-container"><i class="right icon fas fa-chevron-right"></i></div>
+            </div>
+          </a>
+        </div>
+        <div class="item-group mt-10">
+          <a href="#">
+            <div class="row item bt align-items-center">
+              <div class="col-8  mt1 label">Order History</div>
+              <div class="col-4 pr-0 icon-container"><i class="right icon fas fa-chevron-right"></i></div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="row item bt align-items-center">
+              <div class="col-8  mt1 label">Favorite Orders</div>
+              <div class="col-4 pr-0 icon-container"><i class="right icon fas fa-chevron-right"></i></div>
+            </div>
+          </a>
+        </div>
+        <div class="item-group mt-10">
+          <a href="" class="collapsed" data-toggle="collapse" data-target="#account-settings" aria-expanded="true"
+            aria-controls="account-settings">
+
+            <div class="row m-0 item bt align-items-center">
+              <div class="col-8 pl-0 mt1 label">Account Settings</div>
+              <div class="col-4 pr-0 icon-container"><i class="right icon fas"></i></div>
+            </div>
+          </a>
+          <div id="account-settings" class="collapse show" aria-labelledby="Account Settings">
+            <a href="change-password.html">
+              <div class="row m-0 item bt align-items-center">
+                <div class="col pl-0 mt1 label">Change Password</div>
+              </div>
+            </a>
+            <a href="newsletter.html">
+              <div class="row m-0 item bt align-items-center">
+                <div class="col pl-0 mt1 label">Newsletter</div>
+              </div>
+            </a>
+            <a href="logout.html">
+              <div class="row m-0 item bt align-items-center">
+                <div class="col pl-0 mt1 label">Logout</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -280,6 +381,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="assets/js/offCanvas.js"></script>
   <!-- <script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script> -->
   <script src="assets/js/lazysizes.min.js" async></script>
   <script>

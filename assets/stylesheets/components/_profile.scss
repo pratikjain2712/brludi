@@ -1,0 +1,125 @@
+.unknown-profile-container {
+  overflow-y: auto;
+  height: 100%;
+  .close-icon {
+    position: absolute;
+    color: $brand-color-orange;
+    top: 15px;
+    right: 15px;
+    padding: 10px 15px 10px 50px;
+    font-size: 24px;
+  }
+  .unknow-profile {
+    margin-top: 83px;
+    text-align: center;
+  }
+  .message {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $text-color;
+  }
+}
+.profile-container {
+  .profile {
+    background-color: #edf1f4;
+    &-item-name {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    &-item-city {
+      color: #949fa5;
+      font-size: 16px;
+    }
+  }
+  .item-group {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+    a {
+      color: $text-color;
+      text-decoration: none;
+      cursor: pointer;
+      &[aria-expanded='true'] .icon-container {
+        .fas:before {
+          content: '\f078';
+        }
+      }
+      &[aria-expanded='false'] .icon-container {
+        .fas:before {
+          content: '\f054';
+        }
+      }
+    }
+    .item {
+      overflow: hidden;
+      background-color: #fff;
+      padding: 10px 15px;
+      margin-right: 0;
+      &.bordered {
+        margin-top: -1px;
+        padding-left: 20px;
+        .label,
+        .icon-container {
+          border-top: 1px solid #edf1f4;
+          padding-top: 10px;
+          font-size: 16px;
+        }
+      }
+    }
+    &.common-feedback {
+      background-color: #fff;
+      overflow: hidden;
+      padding-bottom: 10px;
+      .item {
+        background-color: rgba(0, 0, 0, 0);
+        padding: 10px 0 0 15px;
+      }
+    }
+  }
+}
+
+.account-details-container {
+  .cover {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      height: 250px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.32) 20%, rgba(0, 0, 0, 0) 100%);
+    }
+    &-img {
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+    }
+    &-back-btn {
+      position: absolute;
+      top: 25px;
+      left: 15px;
+      color: #fff;
+      z-index: 1;
+    }
+    .avatar{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,50%);
+      bottom: 0px;
+      height: 65px;
+      width: 65px;
+    }
+  }
+  .user-details{
+    padding:0px 15px;
+    margin-top: 35px;
+    label{
+      font-size: 14px;
+    }
+  }
+}
